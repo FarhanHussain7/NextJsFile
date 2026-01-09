@@ -1,0 +1,36 @@
+my-app/
+├── pages/              # Routes of your app
+│   ├── index.js        # Home page (/)
+│   ├── about.js        # About page (/about)
+│   └── api/            # API routes (serverless functions)
+│       └── hello.js    # Example API endpoint (/api/hello)
+│
+├── public/             # Static assets (images, fonts, icons)
+│   └── logo.png
+│
+├── styles/             # CSS or SCSS files
+│   ├── globals.css     # Global styles
+│   └── Home.module.css # Page/component-specific styles
+│
+├── components/         # Reusable UI parts
+│   └── Navbar.js
+│
+├── lib/                # Helper functions, utilities
+│   └── db.js           # Example database connection
+│
+├── next.config.js      # Next.js configuration
+├── package.json        # Dependencies and scripts
+└── README.md           # Project info
+
+
+
+📌 Uses in short:
+- pages/ → Defines routes automatically.
+- pages/api/ → Backend API endpoints.
+- public/ → Static files served directly.
+- styles/ → Styling (global + modular).
+- components/ → Reusable UI building blocks.
+- lib/ → Utilities, services, DB logic.
+- next.config.js → Custom Next.js settings.
+- package.json → Project dependencies & scripts.
+👉 Think of pages/ as the "map" of your app, components/ as the "Lego blocks," and public/ as the "assets folder."

@@ -1,0 +1,33 @@
+.main{
+    background-color: green;
+    text-decoration: underline;
+    color: aliceblue;
+}
+
+
+.red{
+    border: 2px solid black;
+    width: 300px;
+    text-align: center;
+    text-decoration: overline underline wavy;
+    border-radius: 20px;
+    background-color: red;
+    color: whitesmoke;
+}
+
+.green{
+    border: 2px solid violet;
+    text-align: center;
+    width: 400px;
+    border-radius: 20px;
+    background-color: green;
+    color: whitesmoke;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.inactive {
+  opacity: 0.5;
+}
