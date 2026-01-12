@@ -48,7 +48,8 @@ export default function LecturePage({ params }) {
       <details>
         <summary>Loader API</summary>
         <Link href="/api/loader" className="border-4 bg-sky-400 text-white mt-5 p-2 w-60 rounded-3xl">Loader API Page</Link>
-        
+        <Link href="/Static_Site_Generation">Static Site </Link>
+        <Link href="/Static_Site_Generation/userdId">Static Site </Link>
       </details>
     </div>
   );
