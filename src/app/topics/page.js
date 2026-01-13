@@ -1,56 +1,127 @@
 // app/topics/page.js
-// Topics page with links to login for routing demonstration
+// Next.js Learning Hub - Chapter Index with Learning Order
 import Link from "next/link";
+import './topics.css';
 
-export default function LecturePage({ params }) {
-  const { lecture } = params;
+const chapters = [
+  {
+    number: 1,
+    title: "Next.js Fundamentals",
+    description: "Core concepts and getting started",
+    topics: [
+      { name: "Basic Routing", path: "/login", description: "Simple page routing" },
+      { name: "About Page", path: "/about", description: "Static page creation" },
+    ]
+  },
+  {
+    number: 2,
+    title: "Advanced Routing",
+    description: "Complex routing patterns",
+    topics: [
+      { name: "Nested Routing", path: "/about/aboutCollage", description: "About Collage page" },
+      { name: "Dynamic Routes", path: "/about/aboutStudent", description: "About Student page" },
+      { name: "404 Error Handling", path: "/404", description: "Custom not found page" },
+    ]
+  },
+  {
+    number: 3,
+    title: "Styling in Next.js",
+    description: "Different styling approaches",
+    topics: [
+      { name: "Global & Inline Styles", path: "/Style/Global-Inline-hook", description: "CSS-in-JS and global styles" },
+      { name: "CSS Modules", path: "/Style/Module_File", description: "Scoped CSS modules" },
+      { name: "Conditional Styling", path: "/Style/conditional_style", description: "Dynamic CSS classes" },
+      { name: "Typography & Fonts", path: "/Style/Fonts", description: "Font optimization" },
+      { name: "Metadata Management", path: "/Style/MetaData", description: "SEO and meta tags" },
+    ]
+  },
+  {
+    number: 4,
+    title: "API Integration",
+    description: "Client and server-side data fetching",
+    topics: [
+      { name: "Client-side API Calls", path: "/api/ClientApi", description: "Fetch data on client" },
+      { name: "Server-side API Calls", path: "/api/serverApi", description: "Fetch data on server" },
+      { name: "API with Loading States", path: "/api/loader", description: "Loading and error states" },
+    ]
+  },
+  {
+    number: 5,
+    title: "Static & Dynamic Content",
+    description: "SSG, SSR, and ISR concepts",
+    topics: [
+      { name: "Static Site Generation", path: "/Static_Site_Generation", description: "Build-time static pages" },
+      { name: "Dynamic SSG", path: "/Static_Site_Generation/userdId", description: "Static with dynamic params" },
+    ]
+  },
+  {
+    number: 6,
+    title: "Assets & Media",
+    description: "Handling images and other assets",
+    topics: [
+      { name: "Image Optimization", path: "/Images", description: "Next.js Image component" },
+    ]
+  },
+  {
+    number: 7,
+    title: "Client-side Scripts",
+    description: "Browser-side functionality",
+    topics: [
+      { name: "External Scripts", path: "/script", description: "Loading third-party scripts" },
+    ]
+  },
+  {
+    number: 8,
+    title: "Advanced Features",
+    description: "Production-ready features",
+    topics: [
+      { name: "Build Optimization", path: "/Build", description: "Build and deployment" },
+      { name: "Redirection", path: "/Redirection", description: "URL redirects" },
+    ]
+  }
+];
+
+export default function TopicsPage() {
   return (
-    <div>
-      <h1>Lecture Page</h1>
-      <details>
-        <summary>Routing</summary>
-        <Link href="/login" className="border-4 bg-sky-400 text-white mt-5 p-2 w-60 rounded-3xl">Login Page</Link>
-       <Link href="/about">Routing (about)</Link>
-      <Link href="/login">Routing (login)</Link>
-      </details>
-
-      <details>
-        <summary>Nested Routing</summary>
-           <Link href="/about/aboutCollage">Go to About Collage</Link>
-            <Link href="/about/aboutStudent">Go to About Student</Link>
-        
-      </details>
-      <details>
-        <summary>API Calls</summary>
-        <Link href="/api/ClientApi" className="border-4 bg-sky-400 text-white mt-5 p-2 w-60 rounded-3xl">API Call (Client)</Link>
-        <Link href="/api/serverApi" className="border-4 bg-sky-400 text-white mt-5 p-2 w-60 rounded-3xl">API Call (Server)</Link>
-      </details>
-      <details>
-        <summary>Style</summary>
-        <Link href="/Style/Global-Inline-hook" className="border-4 bg-sky-400 text-white mt-5 p-2 w-60 rounded-3xl">Global-inline-hook style</Link>
-        <Link href="/Style/Module_File" className="border-4 bg-sky-400 text-white mt-5 p-2 w-60 rounded-3xl">module Style</Link>
-        <Link href="/Style/conditional_style" className="border-4 bg-sky-400 text-white mt-5 p-2 w-60 rounded-3xl">conditional Style</Link>
-        <Link href="/Style/Fonts" className="border-4 bg-sky-400 text-white mt-5 p-2 w-60 rounded-3xl">Fonts Style</Link>
-        <Link href="/Style/MetaData" className="border-4 bg-sky-400 text-white mt-5 p-2 w-60 rounded-3xl">MetaData Style</Link>
-      </details>
+    <div className="topics-container">
+      <header className="topics-header">
+        <h1>Next.js Learning Hub</h1>
+        <p>Master Next.js step by step - Follow the numbered chapters for optimal learning</p>
+      </header>
       
-      <details>
-        <summary>Image</summary>
-        <Link href="/Images" className="border-4 bg-sky-400 text-white mt-5 p-2 w-60 rounded-3xl">Import Image </Link>
-        
-      </details>
-
-      <details>
-        <summary>Script</summary>
-        <Link href="/script" className="border-4 bg-sky-400 text-white mt-5 p-2 w-60 rounded-3xl">Load location (script)</Link>
-      </details>
-
-      <details>
-        <summary>Loader API</summary>
-        <Link href="/api/loader" className="border-4 bg-sky-400 text-white mt-5 p-2 w-60 rounded-3xl">Loader API Page</Link>
-        <Link href="/Static_Site_Generation">Static Site </Link>
-        <Link href="/Static_Site_Generation/userdId">Static Site </Link>
-      </details>
+      <div className="chapters-grid">
+        {chapters.map((chapter) => (
+          <div key={chapter.number} className="chapter-card">
+            <div className="chapter-header">
+              <span className="chapter-number">Chapter {chapter.number}</span>
+              <h2 className="chapter-title">{chapter.title}</h2>
+              <p className="chapter-description">{chapter.description}</p>
+            </div>
+            
+            <div className="topics-list">
+              {chapter.topics.map((topic, index) => (
+                <Link 
+                  key={index} 
+                  href={topic.path}
+                  className="topic-item"
+                >
+                  <span className="topic-icon">📚</span>
+                  <div className="topic-content">
+                    <h3 className="topic-name">{topic.name}</h3>
+                    <p className="topic-description">{topic.description}</p>
+                  </div>
+                  <span className="topic-arrow">→</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <footer className="topics-footer">
+        <p>Total Chapters: {chapters.length} | Total Topics: {chapters.reduce((acc, ch) => acc + ch.topics.length, 0)}</p>
+        <p className="learning-tip">💡 Tip: Follow the chapters in order for the best learning experience!</p>
+      </footer>
     </div>
   );
 }

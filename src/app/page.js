@@ -1,79 +1,182 @@
 'use client'
-// Main Home page component with state management and navigation
-// It is the entry point of the application.
+// Modern Next.js Learning Hub - Home Page
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import profile from '../../public/next.svg';
 import { useRouter } from "next/navigation";
-export default function Home() {
+import './home.css';
 
-  const [name,setName] = useState("Farhan");
+export default function Home() {
+  const [name, setName] = useState("Farhan");
   const router = useRouter();
-  const navigate = (route)=>{
+  
+  const navigate = (route) => {
     router.push(route);
   }
-// Dynamic function to update state
-  const who = (props)=>{
-    alert(props)
-    setName("Farhan Hussain")
+
+  const who = (props) => {
+    alert(props);
+    setName("Farhan Hussain");
   }
 
-  const InnerComp = ()=>{
-    return(
-      <div>
-        <h1>Inner Component in Parent Component
-        </h1>
+  const InnerComp = () => {
+    return (
+      <div className="inner-component">
+        <h3>Inner Component Demo</h3>
+        <p>Components can be nested inside other components</p>
       </div>
     )
   }
 
+  const features = [
+    { icon: "🚀", title: "Fast Performance", description: "Lightning-fast builds and optimized runtime" },
+    { icon: "🎨", title: "Modern Styling", description: "CSS Modules, Tailwind, and more" },
+    { icon: "📱", title: "Mobile First", description: "Responsive design out of the box" },
+    { icon: "⚡", title: "Server Components", description: "Hybrid rendering for optimal performance" }
+  ];
+
   return (
-    <div>
-    <div className="flex h-50 justify-center items-center bg-orange-200">
-      <Image src={profile} alt="Error to load"/>
-      <h1 className="w-50 text-center text-white rounded-2xl"> Next Js || By : {name}</h1>
-     </div>
-     <ul className="flex justify-between">
-      <li>
+    <div className="home-container">
+      {/* Hero Section */}
+      <header className="hero-section">
+        <div className="hero-content">
+          <div className="hero-text">
+            <h1 className="hero-title">
+              Next.js Learning Hub
+              <span className="hero-subtitle">Master Modern Web Development</span>
+            </h1>
+            <p className="hero-description">
+              Welcome to your comprehensive Next.js learning journey. 
+              Build powerful, scalable web applications with the latest React framework.
+            </p>
+            <div className="hero-buttons">
+              <Link href="/topics" className="btn btn-primary">
+                📚 Start Learning
+              </Link>
+              <button onClick={() => navigate("/about")} className="btn btn-secondary">
+                📖 About Project
+              </button>
+            </div>
+          </div>
+          <div className="hero-image">
+            <Image src={profile} alt="Next.js Logo" className="logo-image" />
+          </div>
+        </div>
+      </header>
 
-      </li>
-      <li>
-      <User name="Farhan Hussain"/>
-      </li>
-      <li>
-        <User name="Kaif hussain"/>
-        </li>   
-        <li>
-      <User name="Jihan Hussain"/>
-        </li>
-          </ul>
-    {/* Static button  */}
-      <button className="bg-blue-400 text-white border-amber-200 rounded-3xl w-20" onClick={()=>alert("Just click the button")}>Static button</button>
-    {/* Dynamic Button with State */}
-      <button className="bg-rose-400 text-white border-amber-200 rounded-3xl w-50" onClick={()=>who("Farhan Hussain")}>Dynamic button</button>
-    
-    {/* Inner Component */}
-    <InnerComp/>
+      {/* Interactive Demo Section */}
+      <section className="demo-section">
+        <div className="section-header">
+          <h2>Interactive React Features</h2>
+          <p>Explore core React concepts with live examples</p>
+        </div>
+        
+        <div className="demo-grid">
+          {/* State Management Demo */}
+          <div className="demo-card">
+            <h3>🔄 State Management</h3>
+            <p>Current user: <strong>{name}</strong></p>
+            <div className="demo-buttons">
+              <button onClick={() => who("Farhan Hussain")} className="demo-btn">
+                Update Name
+              </button>
+              <button onClick={() => setName("Guest")} className="demo-btn">
+                Reset to Guest
+              </button>
+            </div>
+          </div>
 
+          {/* Component Composition */}
+          <div className="demo-card">
+            <h3>🧩 Component Composition</h3>
+            <div className="user-list">
+              <User name="Farhan Hussain" />
+              <User name="Kaif Hussain" />
+              <User name="Jihan Hussain" />
+            </div>
+          </div>
 
+          {/* Navigation Methods */}
+          <div className="demo-card">
+            <h3>🧭 Navigation Methods</h3>
+            <div className="nav-methods">
+              <Link href="/login" className="nav-link">
+                🔗 Link Component
+              </Link>
+              <button onClick={() => router.push("/login")} className="nav-btn">
+                ⚡ useRouter.push()
+              </button>
+              <button onClick={() => alert("Programmatic navigation!")} className="nav-btn">
+                📱 Alert Demo
+              </button>
+            </div>
+          </div>
 
-    {/* Link */}
-    <Link href="/login" className="border-4 bg-sky-400 text-white mt-5 p-2 w-60 rounded-3xl">Go to Login </Link>
-    
-    {/* Navigation */}
-    <button onClick={()=>router.push("/login")}>Go to Login</button>
-    <button onClick={()=>navigate("/about")}>Go to About</button>
-    
+          {/* Nested Components */}
+          <div className="demo-card">
+            <h3>📦 Nested Components</h3>
+            <InnerComp />
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="features-section">
+        <div className="section-header">
+          <h2>Why Learn Next.js?</h2>
+          <p>Discover the power of modern full-stack React development</p>
+        </div>
+        
+        <div className="features-grid">
+          {features.map((feature, index) => (
+            <div key={index} className="feature-card">
+              <div className="feature-icon">{feature.icon}</div>
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Quick Access */}
+      <section className="quick-access">
+        <div className="section-header">
+          <h2>Quick Access</h2>
+          <p>Jump to specific learning topics</p>
+        </div>
+        
+        <div className="quick-links">
+          <Link href="/topics" className="quick-link">
+            📚 All Topics
+          </Link>
+          <Link href="/login" className="quick-link">
+            🔐 Login Demo
+          </Link>
+          <Link href="/about" className="quick-link">
+            📄 About Page
+          </Link>
+          <Link href="/Style/Global-Inline-hook" className="quick-link">
+            🎨 Styling Examples
+          </Link>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="home-footer">
+        <p>Built with ❤️ using Next.js 14 | React Learning Project</p>
+        <p>Created by {name} | Interactive Learning Platform</p>
+      </footer>
     </div>
   );
 }
 
-// User component
-const User=(props)=>{
-  return(
-    <div>
-      <h2 className="text-white">My name is {props.name}</h2>
+// User Component
+const User = (props) => {
+  return (
+    <div className="user-card">
+      <h4>👤 {props.name}</h4>
+      <p>React Component</p>
     </div>
   )
 }
