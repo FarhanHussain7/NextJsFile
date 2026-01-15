@@ -77,6 +77,7 @@ const chapters = [
     topics: [
       { name: "Build Optimization", path: "/Build", description: "Build and deployment" },
       { name: "Redirection", path: "/Redirection", description: "URL redirects" },
+      { name: "Enviroment Variable", path: "/env", description: "Enviroment variable"}
     ]
   }
 ];
