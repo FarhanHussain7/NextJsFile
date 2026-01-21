@@ -43,6 +43,9 @@ const chapters = [
       { name: "Client-side API Calls", path: "/api/ClientApi", description: "Fetch data on client" },
       { name: "Server-side API Calls", path: "/api/serverApi", description: "Fetch data on server" },
       { name: "API with Loading States", path: "/api/loader", description: "Loading and error states" },
+      { name: "API with routing ", path: "/api/API_Route", description: "Using API like Backend" },
+      { name: "HTTP API with routing ", path: "/api/HTTP_routes", description: "Using HTTP method like Backend" },
+      { name: "Static data API", path: "/api/static", description: "Using util/db for static data API" },
     ]
   },
   {
