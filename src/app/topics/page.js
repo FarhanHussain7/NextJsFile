@@ -46,6 +46,7 @@ const chapters = [
       { name: "API with routing ", path: "/api/API_Route", description: "Using API like Backend" },
       { name: "HTTP API with routing ", path: "/api/HTTP_routes", description: "Using HTTP method like Backend" },
       { name: "Static data API", path: "/api/static", description: "Using util/db for static data API" },
+      { name: "Static data API", path: "/api/api", description: " data API" },
     ]
   },
   {
