@@ -45,7 +45,7 @@ const chapters = [
       { name: "API with Loading States", path: "/api/loader", description: "Loading and error states" },
       { name: "API with routing ", path: "/api/API_Route", description: "Using API like Backend" },
       { name: "HTTP API with routing ", path: "/api/HTTP_routes", description: "Using HTTP method like Backend" },
-      { name: "Static data API", path: "/api/static", description: "Using util/db for static data API" },
+      { name: "Static data API", path: "/api/staticRouteApi", description: "Using util/db for static data API" },
       { name: "Static data API", path: "/api/api", description: " data API" },
     ]
   },
