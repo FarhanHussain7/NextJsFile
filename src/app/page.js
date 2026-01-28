@@ -51,10 +51,10 @@ export default function Home() {
               Build powerful, scalable web applications with the latest React framework.
             </p>
             <div className="hero-buttons">
-              <Link href="/topics" className="btn btn-primary">
+              <Link href="/19-topics" className="btn btn-primary">
                 📚 Start Learning
               </Link>
-              <button onClick={() => navigate("/about")} className="btn btn-secondary">
+              <button onClick={() => navigate("/2-about")} className="btn btn-secondary">
                 📖 About Project
               </button>
             </div>
@@ -101,10 +101,10 @@ export default function Home() {
           <div className="demo-card">
             <h3>🧭 Navigation Methods</h3>
             <div className="nav-methods">
-              <Link href="/login" className="nav-link">
+              <Link href="/1-login" className="nav-link">
                 🔗 Link Component
               </Link>
-              <button onClick={() => router.push("/login")} className="nav-btn">
+              <button onClick={() => router.push("/1-login")} className="nav-btn">
                 ⚡ useRouter.push()
               </button>
               <button onClick={() => alert("Programmatic navigation!")} className="nav-btn">
@@ -147,16 +147,16 @@ export default function Home() {
         </div>
         
         <div className="quick-links">
-          <Link href="/topics" className="quick-link">
+          <Link href="/19-topics" className="quick-link">
             📚 All Topics
           </Link>
-          <Link href="/login" className="quick-link">
+          <Link href="/1-login" className="quick-link">
             🔐 Login Demo
           </Link>
-          <Link href="/about" className="quick-link">
+          <Link href="/2-about" className="quick-link">
             📄 About Page
           </Link>
-          <Link href="/Style/Global-Inline-hook" className="quick-link">
+          <Link href="/5-Style/Global-Inline-hook" className="quick-link">
             🎨 Styling Examples
           </Link>
         </div>

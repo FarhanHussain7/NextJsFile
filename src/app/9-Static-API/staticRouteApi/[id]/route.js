@@ -1,4 +1,5 @@
 import { user } from '@/app/util/db';
+import { Exo } from 'next/font/google';
 import { NextResponse } from 'next/server';
 
 export async function generateStaticParams() {
@@ -20,4 +21,11 @@ export async function GET(request, context) {
       : { result: userData[0], success: true },
     { status: 200 }
   );
+}
+
+
+
+export async function PUT(request, content){
+  let payload = await request.json;
+  
 }
