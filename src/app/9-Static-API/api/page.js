@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 async function getUsers() {
-    let data = await fetch("http://localhost:3000/api/staticRouteApi")
+    // Use App Router path (no /api prefix) so we fetch the JSON API route
+    let data = await fetch("http://localhost:3000/9-Static-API/staticRouteApi")
     data = await data.json();
     return data;
 }

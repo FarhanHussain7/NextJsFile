@@ -41,3 +41,5 @@ export default function StaticAPIPage(){
         </div>
     )
 }
+
+// C:\Users\HP\New folder\NextJsTopic\learningnextjs\src\app\9-Static-API\staticRouteApi
