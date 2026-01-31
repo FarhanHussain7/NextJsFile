@@ -11,7 +11,7 @@ export default async function Users(){
             {
                 users.map((user)=>(
                     <h1 key={user.id}>
-                        <Link href={`/Static_Site_Generation/${user.id}`}>{user.name}</Link>
+                        <Link href={`/O10_Static_Site_Generation/${user.id}`}>{user.name}</Link>
                     </h1>
                 ))
             }

@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function StudentListPage() {
   const students = [
-    { id: 1, name: "Alice Johnson" },
-    { id: 2, name: "Bob Smith" },
-    { id: 3, name: "Charlie Brown" },
+    { id: 1, name: "Alice Johnson", age: 22, class: "10th" },
+    { id: 2, name: "Bob Smith", age: 23, class: "11th" },
+    { id: 3, name: "Charlie Brown", age: 24, class: "12th" },
   ];
 
   return (
@@ -14,8 +14,8 @@ export default function StudentListPage() {
         {students.map((student) => (
           <li key={student.id} className="mb-2">
             {/* ✅ Link points to /3-studentlist/[id] */}
-            <Link href={`/studentlist/${student.id}`}>
-              {student.name}
+            <Link href={`/O3_studentlist/${student.id}`}>
+              {student.name} - Age: {student.age} - Class: {student.class}
             </Link>
           </li>
         ))}

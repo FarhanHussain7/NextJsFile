@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
       >
 
         {
-          pathname !== "/1-login/teacher" ?
+          pathname !== "/O1_login/teacher" ?
         <ul className="site-header">
           <li>
             <Link href="/" className="nav-link">
@@ -58,17 +58,17 @@ export default function RootLayout({ children }) {
             </Link>
           </li>
           <li>
-            <Link href="/2-about" className="nav-link">
+            <Link href="/O2_about" className="nav-link">
               About
             </Link>
           </li>
           <li>
-            <Link href="/1-login" className="nav-link">
+            <Link href="/O1_login" className="nav-link">
               Login
             </Link>
           </li>
           <li>
-            <Link href="/19-topics" className="nav-link">
+            <Link href="/O19_topics" className="nav-link">
               Topics
             </Link>
           </li>

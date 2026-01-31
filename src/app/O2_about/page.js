@@ -42,8 +42,8 @@ export default function About() {
                 Toggle {theme === 'light' ? 'Dark' : 'Light'} Mode
             </button>
 
-            <Link href="/2-about/aboutCollage">Go to About Collage</Link>
-            <Link href="/2-about/aboutStudent">Go to About Student</Link>
+            <Link href="/O2_about/aboutCollage">Go to About Collage</Link>
+            <Link href="/O2_about/aboutStudent">Go to About Student</Link>
         </div>
     );
 }
