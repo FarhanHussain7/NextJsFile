@@ -7,7 +7,7 @@ export default function StaticAPIPage(){
             <p>These examples demonstrate working with static data and database-like operations</p>
             
             <div style={{display: "flex", gap: "20px", flexWrap: "wrap"}}>
-                <Link href="/10-Static-API/staticRouteApi" style={{
+                <Link href="/9-Static-API/staticRouteApi" style={{
                     padding: "10px 20px", 
                     backgroundColor: "#8b5cf6", 
                     color: "white", 
@@ -17,7 +17,7 @@ export default function StaticAPIPage(){
                     💾 Static Data API (GET/POST)
                 </Link>
                 
-                <Link href="/10-Static-API/api" style={{
+                <Link href="/9-Static-API/api" style={{
                     padding: "10px 20px", 
                     backgroundColor: "#8b5cf6", 
                     color: "white", 

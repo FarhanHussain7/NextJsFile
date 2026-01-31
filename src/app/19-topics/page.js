@@ -18,6 +18,7 @@ const chapters = [
     topics: [
       { name: "Nested Routing", path: "/2-about/aboutCollage", description: "About Collage page" },
       { name: "Dynamic Routes", path: "/2-about/aboutStudent", description: "About Student page" },
+      { name: "Inside Link Routes", path: "/studentlist", description: "Student details page" },
       { name: "404 Error Handling", path: "/404", description: "Custom not found page" },
     ]
   },
