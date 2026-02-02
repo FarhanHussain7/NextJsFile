@@ -19,6 +19,7 @@ export default async function Page() {
           <Link href={`/O9_Static_API/api/${item.id}`}>
             {item.name}
           </Link>
+          <span><Link href={`/O9_Static_API/api/${item.id}/update`}>Update</Link></span>
         </div>
       ))}
     </div>

@@ -71,7 +71,7 @@ const chapters = [
     description: "SSG, SSR, and ISR concepts",
     topics: [
       { name: "Static Site Generation", path: "/O10_Static_Site_Generation", description: "Build-time static pages" },
-      { name: "Dynamic SSG", path: "/O10_Static_Site_Generation/userdId", description: "Static with dynamic params" },
+      { name: "Dynamic SSG", path: "/O10_Static_Site_Generation/userId", description: "Static with dynamic params" },
       { name: "Static Content", path: "/O18_static", description: "Static page examples" },
     ]
   },
