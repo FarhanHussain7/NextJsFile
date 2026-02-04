@@ -9,7 +9,7 @@ export async function generateStaticParams() {
 }
 
 export async function GET(request, context) {
-  // ✅ unwrap params properly
+  // unwrap params properly
   const { params } = context;
   const { id } = await params;   // <-- this is the missing await
 
@@ -20,5 +20,27 @@ export async function GET(request, context) {
       ? { result: 'No Data found', success: false }
       : { result: userData[0], success: true },
     { status: 200 }
+  );
+}
+
+// Handle PUT request to update user data
+export async function PUT(request, context) {
+  const { params } = context;
+  const { id } = await params;
+
+  const payload = await request.json();
+
+  console.log("Name:", payload.name, "Age:", payload.age, "Email:", payload.email);
+
+  if (!payload.name || !payload.age || !payload.email) {
+    return NextResponse.json(
+      { result: "Missing fields", success: false },
+      { status: 400 }
+    );
+  }
+
+  return NextResponse.json(
+    { result: `User ${id} updated successfully`, success: true },
+    { status: 201 }
   );
 }
