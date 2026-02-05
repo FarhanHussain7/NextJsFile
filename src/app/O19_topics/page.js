@@ -5,7 +5,7 @@ import './topics.css';
 
 const chapters = [
   {
-    title: "Next.js Fundamentals",
+    title: "O1 Next.js Fundamentals",
     description: "Core concepts and getting started",
     topics: [
       { name: "Basic Routing", path: "/O1_login", description: "Simple page routing" },
@@ -13,7 +13,7 @@ const chapters = [
     ]
   },
   {
-    title: "Advanced Routing",
+    title: "O2 Advanced Routing",
     description: "Complex routing patterns",
     topics: [
       { name: "Dynamic Student Routes", path: "/O3_studentlist", description: "Dynamic routing with student list" },
@@ -24,7 +24,7 @@ const chapters = [
     ]
   },
   {
-    title: "Styling in Next.js",
+    title: "O3 Styling in Next.js",
     description: "Different styling approaches",
     topics: [
       { name: "Global & Inline Styles", path: "/O5_Style/Global-Inline-hook", description: "CSS-in-JS and global styles" },
@@ -32,7 +32,7 @@ const chapters = [
     ]
   },
   {
-    title: "Client-Side API Integration",
+    title: "O4 Client-Side API Integration",
     description: "Fetching data on the client with React hooks",
     topics: [
       { name: "Products API (Client)", path: "/O6_Client_API/ClientApi", description: "Client-side data fetching" },
@@ -41,7 +41,7 @@ const chapters = [
     ]
   },
   {
-    title: "Server-Side API Integration",
+    title: "O5 Server-Side API Integration",
     description: "Fetching data on the server with Next.js",
     topics: [
       { name: "Products API (Server)", path: "/O7_Server_API/serverApi", description: "Server-side data fetching" },
@@ -49,7 +49,7 @@ const chapters = [
     ]
   },
   {
-    title: "API Routes Development",
+    title: "O6 API Routes Development",
     description: "Building your own backend APIs",
     topics: [
       { name: "Basic API Route", path: "/O8_API_Routes/API_Route", description: "Simple API endpoint" },
@@ -58,7 +58,7 @@ const chapters = [
     ]
   },
   {
-    title: "Static Data Management",
+    title: "O7 Static Data Management",
     description: "Working with static data and database-like operations",
     topics: [
       { name: "Static Data API", path: "/O9_Static_API/staticRouteApi", description: "CRUD with static data" },
@@ -67,7 +67,7 @@ const chapters = [
     ]
   },
   {
-    title: "Static & Dynamic Content",
+    title: "O8 Static & Dynamic Content",
     description: "SSG, SSR, and ISR concepts",
     topics: [
       { name: "Static Site Generation", path: "/O10_Static_Site_Generation", description: "Build-time static pages" },
@@ -76,7 +76,7 @@ const chapters = [
     ]
   },
   {
-    title: "Assets & Media",
+    title: "O9 Assets & Media",
     description: "Handling images and other assets",
     topics: [
       { name: "Image Optimization", path: "/O11_Images", description: "Next.js Image component" },
@@ -84,14 +84,14 @@ const chapters = [
     ]
   },
   {
-    title: "Client-side Scripts",
+    title: "O10 Client-side Scripts",
     description: "Browser-side functionality",
     topics: [
       { name: "External Scripts", path: "/O12_script", description: "Loading third-party scripts" },
     ]
   },
   {
-    title: "Advanced Features",
+    title: "O11 Advanced Features",
     description: "Production-ready features",
     topics: [
       { name: "Build Optimization", path: "/O13_Build", description: "Build and deployment" },

@@ -44,3 +44,13 @@ export async function PUT(request, context) {
     { status: 201 }
   );
 }
+
+
+export async function DELETE(request, context) {
+  const { params } = context;
+  const { id } = await params; 
+  return NextResponse.json(
+    { result: `User ${id} deleted successfully`, success: true },
+    { status: 200 }
+  );
+}
