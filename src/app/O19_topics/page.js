@@ -80,7 +80,7 @@ const chapters = [
     description: "Handling images and other assets",
     topics: [
       { name: "Image Optimization", path: "/O11_Images", description: "Next.js Image component" },
-      { name: "Post Management", path: "/O16_Post", description: "Post handling and display" },
+      { name: "Form & HTTP Request", path: "/O16_Forms_Http_Request", description: "Handling and displaying HTTP requests" },
     ]
   },
   {
