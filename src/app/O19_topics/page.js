@@ -55,6 +55,7 @@ const chapters = [
       { name: "Basic API Route", path: "/O8_API_Routes/API_Route", description: "Simple API endpoint" },
       { name: "HTTP Methods", path: "/O8_API_Routes/HTTP_routes", description: "GET/POST/PUT/DELETE" },
       { name: "API Routes Overview", path: "/O8_API_Routes", description: "All API route examples" },
+      { name: "API Routes Catch-all", path: "/O8_API_Routes/allroutes", description: "Catch-all API routes" },
     ]
   },
   {
