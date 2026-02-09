@@ -68,7 +68,7 @@ export default function RootLayout({ children }) {
             </Link>
           </li>
           <li>
-            <Link href="/O19_topics" className="nav-link">
+            <Link href="/topics" className="nav-link">
               Topics
             </Link>
           </li>

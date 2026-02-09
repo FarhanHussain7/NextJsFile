@@ -100,6 +100,13 @@ const chapters = [
       { name: "Environment Variables", path: "/O15_env", description: "Environment configuration" },
       { name: "App Configuration", path: "/O17_config", description: "Application settings" },
     ]
+  },
+  {
+    title: "O12 Database Integration",
+    description: "Connecting to databases",
+    topics: [
+      { name: "MongoDB Atlas", path: "/MongoAtlas", description: "Connecting to MongoDB Atlas" },
+    ]
   }
 ];
 
