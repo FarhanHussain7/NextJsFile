@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-// NextjsDBproduct
+// 
 
 export default function MongoAtalas(){
     const [name, setName] = useState("");
