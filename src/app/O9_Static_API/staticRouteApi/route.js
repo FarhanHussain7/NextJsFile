@@ -5,11 +5,29 @@ export const dynamic = "force-static";
 import mongoose from 'mongoose';
 import Product from '@/app/model/product';
 
-export function GET(){
-    const data = user;
-    return NextResponse.json(data,{result:"Static GET API working successfully"},{status:200})
+export async function GET() {
+  try {
+    await mongoose.connect(mongoURI);
+    console.log("✅ Connected to MongoDB Atlas successfully");
+
+    const data = await Product.find();
+    console.log("📋 Retrieved products:", data);
+
+    return NextResponse.json(
+      { result: "Static GET API working successfully", data }, 
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return NextResponse.json(
+      { error: "Failed to fetch data" }, 
+      { status: 500 }
+    );
+  }
 }
 
+
+// POST API to add product to MongoDB Atlas
 export async function POST(request){
     console.log("📦 POST request received for MongoDB Atlas");
     

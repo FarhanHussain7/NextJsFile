@@ -105,7 +105,7 @@ const chapters = [
     title: "O12 Database Integration",
     description: "Connecting to databases",
     topics: [
-      { name: "MongoDB Atlas", path: "/MongoAtlas", description: "Connecting to MongoDB Atlas" },
+      { name: "MongoDB Atlas", path: "/O19_MongoAtlas", description: "Connecting to MongoDB Atlas" },
     ]
   }
 ];

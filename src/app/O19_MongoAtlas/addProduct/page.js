@@ -31,9 +31,9 @@ export default function MongoAtalas(){
         <div className="flex justify-center items-center">
             <h1>Mongo Atlas</h1>
             <input className="text-blue-600 bg-amber-50 border-2 border-black p-2 m-2 rounded-2xl" type="text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}></input>
-            <input className="text-blue-600 bg-amber-50 border-2 border-black p-2 m-2" type="text" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
-            <input className="text-blue-600 bg-amber-50 border-2 border-black p-2 m-2" type="text" placeholder="Enter your phone" value={phone} onChange={(e) => setPhone(e.target.value)}></input>
-            <input className="text-blue-600 bg-amber-50 border-2 border-black p-2 m-2" type="text" placeholder="Enter your address" value={address} onChange={(e) => setAddress(e.target.value)}></input>
+            <input className="text-blue-600 bg-amber-50 border-2 border-black p-2 m-2 rounded-2xl" type="text" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+            <input className="text-blue-600 bg-amber-50 border-2 border-black p-2 m-2 rounded-2xl" type="text" placeholder="Enter your phone" value={phone} onChange={(e) => setPhone(e.target.value)}></input>
+            <input className="text-blue-600 bg-amber-50 border-2 border-black p-2 m-2 rounded-2xl" type="text" placeholder="Enter your address" value={address} onChange={(e) => setAddress(e.target.value)}></input>
             <button onClick={addProduct}>Add Product</button>
         
         </div>
