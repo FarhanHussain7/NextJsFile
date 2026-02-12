@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 // 
@@ -29,7 +30,8 @@ export default function MongoAtalas(){
     }
     return(
         <div className="flex justify-center items-center">
-            <h1>Mongo Atlas</h1>
+            <h1>Mongo Atlas</h1> 
+            <Link href="/O19_MongoAtlas" className="text-white bg-amber-50 border-2 border-black p-2 m-2 rounded-2xl">Back</Link>
             <input className="text-blue-600 bg-amber-50 border-2 border-black p-2 m-2 rounded-2xl" type="text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}></input>
             <input className="text-blue-600 bg-amber-50 border-2 border-black p-2 m-2 rounded-2xl" type="text" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
             <input className="text-blue-600 bg-amber-50 border-2 border-black p-2 m-2 rounded-2xl" type="text" placeholder="Enter your phone" value={phone} onChange={(e) => setPhone(e.target.value)}></input>

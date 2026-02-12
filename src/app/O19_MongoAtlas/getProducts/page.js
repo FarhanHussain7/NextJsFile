@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const getData = async () => {
   try {
     let result = await fetch('http://localhost:3000/O9_Static_API/staticRouteApi');
@@ -24,6 +26,8 @@ export default async function getProducts(){
     return(
         <div>
             <h1>List of Products </h1>
+            
+          
             <table border="1" className="text-black table-auto border-collapse border border-slate-500 w-full">
                 <thead>
                     <tr>
@@ -31,20 +35,26 @@ export default async function getProducts(){
                         <th className="border border-slate-600 p-2">Email</th>
                         <th className="border border-slate-600 p-2">Phone</th>
                         <th className="border border-slate-600 p-2">Address</th>
+                        <th className="border border-slate-600 p-2">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        products.map((item) => (
+                      products.map((item) => (
                             <tr key={item._id}>
                                 <td className="border border-slate-600 p-2">{item.name}</td>    
                                 <td className="border border-slate-600 p-2">{item.email}</td>
                                 <td className="border border-slate-600 p-2">{item.phone}</td>
                                 <td className="border border-slate-600 p-2">{item.address}</td>
+                                <td className="border border-slate-600 p-2">
+                                  <Link href={`/O19_MongoAtlas/updateProduct/${item._id}`} className="text-white bg-blue-500 border-2 border-black p-1 m-1 rounded">Update</Link>
+                                  <Link href={`/O19_MongoAtlas/deleteProduct/${item._id}`} className="text-white bg-red-500 border-2 border-black p-1 m-1 rounded">Delete</Link> 
+                                </td>
                             </tr>
                     ))}
                 </tbody>
             </table>
+              <Link href="/O19_MongoAtlas" className="text-white bg-amber-50 border-2 border-black p-2 m-2 rounded-2xl">Back</Link>
         </div>
     )
 }

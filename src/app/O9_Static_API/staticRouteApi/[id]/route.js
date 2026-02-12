@@ -1,6 +1,10 @@
 import { user } from '@/app/util/db';
 import { Exo } from 'next/font/google';
-import { NextResponse } from 'next/server';
+import mongoose from "mongoose";
+import { NextResponse } from "next/server";
+import Product from "@/app/model/product";
+import { mongoURI } from "@/app/util/MongoConnection";
+
 
 export async function generateStaticParams() {
   return user.map((item) => ({
@@ -24,25 +28,58 @@ export async function GET(request, context) {
 }
 
 // Handle PUT request to update user data
-export async function PUT(request, context) {
-  const { params } = context;
-  const { id } = await params;
+export async function PUT(request, { params }) {
+  try {
+    // Connect to MongoDB Atlas
+    await mongoose.connect(mongoURI);
 
-  const payload = await request.json();
+    // Extract id from params
+    const { id } = params;
 
-  console.log("Name:", payload.name, "Age:", payload.age, "Email:", payload.email);
+    // Parse request body
+    const payload = await request.json();
 
-  if (!payload.name || !payload.age || !payload.email) {
+    // Validate required fields
+    if (!payload.name || !payload.email || !payload.phone || !payload.address) {
+      return NextResponse.json(
+        { result: "Missing fields", success: false },
+        { status: 400 }
+      );
+    }
+
+    // Update product by id
+    const updatedProduct = await Product.findByIdAndUpdate(
+      id,
+      {
+        name: payload.name,
+        email: payload.email,
+        phone: payload.phone,
+        address: payload.address,
+      },
+      { new: true } // return updated document
+    );
+
+    if (!updatedProduct) {
+      return NextResponse.json(
+        { result: "Product not found", success: false },
+        { status: 404 }
+      );
+    }
+
     return NextResponse.json(
-      { result: "Missing fields", success: false },
-      { status: 400 }
+      {
+        message: `Product ${id} updated successfully`,
+        data: updatedProduct,
+        success: true,
+      },
+      { status: 200 }
+    );
+  } catch (error) {
+    return NextResponse.json(
+      { message: "Database operation failed", error: error.message, success: false },
+      { status: 500 }
     );
   }
-
-  return NextResponse.json(
-    { result: `User ${id} updated successfully`, success: true },
-    { status: 201 }
-  );
 }
 
 
