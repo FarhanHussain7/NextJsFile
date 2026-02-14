@@ -1,9 +1,5 @@
 import { MongoClient } from 'mongodb';
 
-// Hardcoded MongoDB Atlas credentials (permanent fix for authentication issues)
-const USER_NAME = 'fh4456200_db_user';
-const PASSWORD = 'NextjsDBproduct';
-
 // Direct MongoDB URI
 export const mongoURI = `mongodb+srv://${USER_NAME}:${PASSWORD}@productdb.wdijry3.mongodb.net/ProductDB?retryWrites=true&w=majority`;
 
