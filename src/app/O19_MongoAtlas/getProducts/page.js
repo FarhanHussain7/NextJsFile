@@ -47,14 +47,14 @@ export default async function getProducts(){
                                 <td className="border border-slate-600 p-2">{item.phone}</td>
                                 <td className="border border-slate-600 p-2">{item.address}</td>
                                 <td className="border border-slate-600 p-2">
-                                  <Link href={`/O19_MongoAtlas/updateProduct/${item._id}`} className="text-white bg-blue-500 border-2 border-black p-1 m-1 rounded">Update</Link>
-                                  <Link href={`/O19_MongoAtlas/deleteProduct/${item._id}`} className="text-white bg-red-500 border-2 border-black p-1 m-1 rounded">Delete</Link> 
+                                  <Link href={`/O19_MongoAtlas/getProducts/update/${item._id}`} className="text-white bg-blue-500 border-2 border-black p-1 m-1 rounded hover:bg-blue-600 transition-colors">Update</Link>
+                                  <Link href={`/O19_MongoAtlas/getProducts/delete/${item._id}`} className="text-white bg-red-500 border-2 border-black p-1 m-1 rounded hover:bg-red-600 transition-colors">Delete</Link> 
                                 </td>
                             </tr>
                     ))}
                 </tbody>
             </table>
-              <Link href="/O19_MongoAtlas" className="text-white bg-amber-50 border-2 border-black p-2 m-2 rounded-2xl">Back</Link>
+              <Link href="/O19_MongoAtlas" className="text-white bg-amber-50 border-2 border-black p-2 m-2 rounded-2xl hover:bg-amber-100 transition-colors">Back</Link>
         </div>
     )
 }
