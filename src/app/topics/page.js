@@ -62,9 +62,9 @@ const chapters = [
     title: "O7 Static Data Management",
     description: "Working with static data and database-like operations",
     topics: [
-      { name: "Static Data API", path: "/O9_Static_API/staticRouteApi", description: "CRUD with static data" },
-      { name: "Dynamic User Routes", path: "/O9_Static_API/api", description: "Users with dynamic routing" },
-      { name: "Static API Overview", path: "/O9_Static_API", description: "All static data examples" },
+      { name: "Static Data API", path: "/O9_API/staticRouteApi", description: "CRUD with static data" },
+      { name: "Dynamic User Routes", path: "/O9_API/api", description: "Users with dynamic routing" },
+      { name: "Static API Overview", path: "/O9_API", description: "All static data examples" },
     ]
   },
   {

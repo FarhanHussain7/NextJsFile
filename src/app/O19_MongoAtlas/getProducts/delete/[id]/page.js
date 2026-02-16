@@ -21,7 +21,7 @@ export default function DeleteProduct({ params }) {
 
   const fetchProduct = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/O9_Static_API/staticRouteApi/${unwrappedParams.id}`);
+      const response = await fetch(`http://localhost:3000/O9_API/staticRouteApi/${unwrappedParams.id}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -41,7 +41,7 @@ export default function DeleteProduct({ params }) {
     setSuccess('');
     
     try {
-      const response = await fetch(`http://localhost:3000/O9_Static_API/staticRouteApi/${unwrappedParams.id}`, {
+      const response = await fetch(`http://localhost:3000/O9_API/staticRouteApi/${unwrappedParams.id}`, {
         method: 'DELETE',
       });
 

@@ -15,7 +15,7 @@ export default function MongoAtalas(){
         e.preventDefault();
         console.log("Adding product:", { name, email, phone, address });
         try{
-            let result = await fetch('http://localhost:3000/O9_Static_API/staticRouteApi', {
+            let result = await fetch('http://localhost:3000/O9_API/staticRouteApi', {
                 method: 'post',
                 body: JSON.stringify({ name, email, phone, address }),
                 headers: {
