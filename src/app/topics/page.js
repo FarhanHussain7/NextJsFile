@@ -107,6 +107,13 @@ const chapters = [
     topics: [
       { name: "MongoDB Atlas", path: "/O19_MongoAtlas", description: "Connecting to MongoDB Atlas" },
     ]
+  },
+  {
+    title: "O13 Uploads & File Handling",
+    description: "Handling file uploads and downloads",
+    topics: [
+      { name: "File Uploads", path: "/O20_Upload_File", description: "Uploading files to the server" },
+    ]
   }
 ];
 
