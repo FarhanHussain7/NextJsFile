@@ -114,6 +114,13 @@ const chapters = [
     topics: [
       { name: "File Uploads", path: "/O20_Upload_File", description: "Uploading files to the server" },
     ]
+  },
+  {
+    title: "O14 Interview Questions",
+    description: "Common interview questions and answers",
+    topics: [
+      { name: "Interview Questions", path: "/O21_Interview_Question", description: "All interview questions and answers" },
+    ]
   }
 ];
 
